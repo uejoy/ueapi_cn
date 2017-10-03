@@ -1,0 +1,393 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>AIModule · 虚幻引擎API中文版</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Zery">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="advertising.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.uejoy.com" target="_blank" class="custom-link">UEJoy网站</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1.html">
+            
+                <a href="../chapter1.html">
+            
+                    
+                    Runtime
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="actorsequence.html">
+            
+                <a href="actorsequence.html">
+            
+                    
+                    ActorSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="advertising.html">
+            
+                <a href="advertising.html">
+            
+                    
+                    Advertising
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="aimodule.html">
+            
+                <a href="aimodule.html">
+            
+                    
+                    AIModule
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >AIModule</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="aimodule">AIModule</h1>
+<p>&gt;Runtime&gt;AIModule</p>
+<p>&#x4E3A;AI Pawns&#x548C;&#x529F;&#x80FD;&#x63D0;&#x4F9B;&#x884C;&#x4E3A;&#x6811;&#x652F;&#x6301;&#x7684;&#x63A7;&#x5236;&#x5668;</p>
+<h4 id="&#x8FC7;&#x6EE4;&#x5668;">&#x8FC7;&#x6EE4;&#x5668;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Actions</th>
+<th style="text-align:left">BehaviorTree</th>
+<th style="text-align:left">Blueprint</th>
+<th style="text-align:left">DataProviders</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">EnvironmentQuery</td>
+<td style="text-align:left">HotSpots</td>
+<td style="text-align:left">Navigation</td>
+<td style="text-align:left">Perception</td>
+</tr>
+<tr>
+<td style="text-align:left">Tasks</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x7C7B;">&#x7C7B;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">AAIController</td>
+<td style="text-align:left">AIContoller&#x662F;&#x4E3A;AI&#x64CD;&#x63A7;&#x7684;Pawn&#x63D0;&#x4F9B;&#x63A7;&#x5236;&#x5668;&#x7684;&#x57FA;&#x7840;&#x7C7B;</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">ADetourCrowdAIController</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">AGridPathAIController</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">FAIBasicCounter</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">FAIGenericID</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">FAIMessage</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">FAIMessageObserver</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">FAIMoveCompletedSignature</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">FAIMoveRequest</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">FAINamedID</td>
+<td style="text-align:left">TCounter&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#xFF1A;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;typedef X&#x7C7B;&#x578B;; &#x5176;&#x4E2D;X&#x662F;&#x7528;&#x4F5C;ID&#x7684;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x7684;&#x6574;&#x6570;&#x7C7B;&#x578B;TCounter :: Type GetNextAvailableID&#xFF08;&#xFF09; - &#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;ID&#xFF0C;&#x5E76;&#x63D0;&#x524D;&#x6267;&#x884C;&#x5185;&#x90E8;&#x8BA1;&#x6570;&#x5668;uint32 GetSize&#xFF08;&#xFF09;const - &#x8FD4;&#x56DE;&#x8FC4;&#x4ECA;&#x521B;&#x5EFA;&#x7684;&#x552F;&#x4E00;ID&#x7684;&#x6570;&#x91CF;OnIndexForced&#xFF08;TCounter :: Type &#x7D22;&#x5F15;&#xFF09; - &#x5F53;&#x7ED9;&#x5B9A;&#x7D22;&#x5F15;&#x5DF2;&#x88AB;&#x5F3A;&#x5236;&#x4F7F;&#x7528;&#x65F6;&#x8C03;&#x7528;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; uejoy.com 2017 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2017-10-03 22:23:21
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"AIModule","level":"1.2.3","depth":2,"previous":{"title":"Advertising","level":"1.2.2","depth":2,"path":"chapter1/advertising.md","ref":"chapter1/advertising.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","tbfed-pagefooter","donate","theme-api"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy uejoy.com 2017","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://www.uejoy.com/wp-content/uploads/2017/10/alipay.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://www.uejoy.com/wp-content/uploads/2017/10/weixin.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Zery","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"虚幻引擎API中文版","language":"zh-hans","links":{"sidebar":{"UEJoy网站":"http://www.uejoy.com"}},"gitbook":"*","description":"这是尝试翻译虚幻引擎API的网站"},"file":{"path":"chapter1/aimodule.md","mtime":"2017-10-03T14:23:21.658Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-03T14:23:33.473Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
